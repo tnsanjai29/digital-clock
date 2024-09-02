@@ -1,38 +1,115 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.head{
+    position: fixed;
+    /* margin-top: 20px; */
+    color: #090725;
+    text-shadow: 0 0 5px #201E43,0 0 10px #201E43,
+    0 0 15px #F5EDED,
+     0 0 20px #F5EDED, 
+    0 0 25px #F5EDED,
+    0 0 30px #F5EDED,
+    0 0 35px #F5EDED;
+}
+.date{
+    text-align: center;
+    color: #b1adff;
+    text-shadow: 0 0 5px #201E43,0 0 10px #201E43,
+    0 0 15px #F5EDED,
+     0 0 20px #F5EDED, 
+    0 0 25px #F5EDED,
+    0 0 30px #F5EDED,
+    0 0 35px #F5EDED;
+    text-transform: uppercase;
+}
+.outerdiv{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clock .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.ampm{
+    position: relative;
+    color:goldenrod;
+    font-weight: 700;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.clock:hover{
+    background-color: rgb(147, 229, 243);
+    box-shadow: 0 4px 4px rgba(0,0,0,0.2);
+    cursor: pointer;
+    border-radius: 3px;
+    width: 350px;
+    box-sizing: border-box;
+    padding: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@media only screen and (max-width : 600px){
+    .clock{
+        position: relative;
+        width: 300px;
+        height: 140px;
+        background: rgb(147, 229, 243);
+        box-shadow: 0 15px 15px rgba(0,0,0,0.1);
+        border-radius: 20px;
+        border: 1px solid rgba(147, 229, 243);
+        backdrop-filter: blur(10px);
+    }
+    .clock .container h2{
+        font-size: 3em;
+    }
+    .clock .container h2:nth-child(odd){
+        padding: 1px 2px;
+        border-radius: 20px;
+        background-color: rgba(225,225,225,0.1);
+        box-shadow: 0 15px 15px rgba(0,0,0,0.1);
+        margin: 0 1px;
+        border-bottom: 1px solid rgba(225,225,225,0.1);
+        border-radius: 1px solid rgba(225,225,225,0.1);
+    }
+    
+    .ampm{
+        top: -12px;
+        font-size: 1em;
+    }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media only screen and (min-width : 600px){
+    .clock{
+        position: relative;
+        width: 400px;
+        height: 140px;
+        background: rgb(147, 229, 243);
+        box-shadow: 0 15px 15px rgba(0,0,0,0.1);
+        border-radius: 20px;
+        border: 1px solid rgba(147, 229, 243);
+        backdrop-filter: blur(10px);
+    }
+    .clock .container h2{
+        font-size: 4em;
+    }
+    .clock .container h2:nth-child(odd){
+        padding: 1px 1px;
+        border-radius: 20px;
+        background-color: rgba(225,225,225,0.1);
+        box-shadow: 0 15px 15px rgba(0,0,0,0.1);
+        margin: 0 1px;
+        border-bottom: 1px solid rgba(225,225,225,0.1);
+        border-radius: 1px solid rgba(225,225,225,0.1);
+    }
+    .ampm{
+        top: -20px;
+        font-size: 1em;
+    }
 }
